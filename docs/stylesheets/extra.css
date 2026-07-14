@@ -1,0 +1,29 @@
+.md-grid {
+    max-width: 1600px;
+}
+
+.md-typeset h1 {
+    font-weight: 700;
+}
+
+.md-typeset h2 {
+    border-bottom: 1px solid var(--md-default-fg-color--lighter);
+    padding-bottom: .3rem;
+}
+
+.md-typeset table {
+    font-size: .85rem;
+}
+
+.md-sidebar {
+    font-size: .9rem;
+}
+
+.md-header {
+    box-shadow: none;
+}
+
+.md-content {
+    padding-bottom: 4rem;
+}
+

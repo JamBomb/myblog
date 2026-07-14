@@ -1,0 +1,132 @@
+site_name: Robert's Wiki
+site_description: Internal Knowledge Base
+site_author: Robert
+
+theme:
+  name: material
+  language: en
+  logo: images/logo.svg
+  favicon: images/favicon.png
+
+  features:
+
+    # Navigation
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.path
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+
+    # Search
+    - search.highlight
+    - search.suggest
+    - search.share
+
+    # Code
+    - content.code.copy
+    - content.code.annotate
+
+    # Tabs
+    - content.tabs.link
+
+    # Header
+    - header.autohide
+
+  palette:
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+
+  - toc:
+      permalink: true
+
+  - pymdownx.details
+
+  - pymdownx.superfences
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+  - pymdownx.inlinehilite
+
+  - pymdownx.snippets
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - pymdownx.keys
+
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  generator: false
+
+  copyright: |
+    © 2026 Robert Luo
+
+    CosmoArt Technologies
+
+    Engineering the Future with AI, Intelligent Systems and Innovation.
+  
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/tex-mml-chtml.js
+  - javascripts/mathjax.js
+
+nav:
+
+  - Home: index.md
+
+  - Linux:
+      - Linux: linux/index.md
+      - Kernel: linux/kernel.md
+      - Network: linux/network.md
+
+  - C/C++:
+      - Overview: cpp/index.md
+      - STL: cpp/stl.md
+      - C++26: cpp/cpp26.md
+
+  - OLT:
+      - Overview: olt/index.md
+      - Debug: olt/debug.md
+      - Build: olt/build.md
+      - Pullme: olt/pullme.md
