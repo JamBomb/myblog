@@ -4,6 +4,11 @@ PORT = 8080
 SITE = site
 DEPLOY_DIR = /var/www/cosmoart
 
+push:
+	git add .
+	git commit -m "$(msg)"
+	git push
+
 build:
 	@mkdocs build
 
